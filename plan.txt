@@ -1,8 +1,11 @@
-classe affichage grille :
-    - boucle pour lignes :
-        - affichage d'une ligne de -
-        - boucle pour colonnes :
-            - affichage du modèle | 0 |
+classe jeu :
+    - méthode init : création grille avec 2 tuiles aléatoires
+    - méthode end : affichage message de fin, score et nombre de coups
+
+classe grille :
+    - variables : taille
+    - méthode création : (tableau nxn initialisé avec des 0)
+    - méthode affichage : (modèle suivant)
 
 -----------------
 | 0 | 0 | 0 | 0 |
@@ -14,9 +17,11 @@ classe affichage grille :
 | 0 | 0 | 0 | 0 |
 -----------------
 
-classe jeu
+classe tuile :
+    - variables : valeur, position
+    - méthode random : créer une tuile de valeur 2 ou 4 à une position aléatoire
 
-fonction déplacement :
+fonctions déplacement :
     - si pas d'obstacle (limite grille ou autre cellule) dans la direction voulue, déplacement d'une case dans cette direction
 
 fonction fusion :
