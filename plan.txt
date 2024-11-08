@@ -6,6 +6,8 @@ classe grille :
     - variables : taille
     - méthode création : (tableau nxn initialisé avec des 0)
     - méthode affichage : (modèle suivant)
+    - méthode déplacements : >fonctions déplacement
+    - méthode fusion : >fonction fusion
 
 -----------------
 | 0 | 0 | 0 | 0 |
