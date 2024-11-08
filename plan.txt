@@ -1,0 +1,45 @@
+classe affichage grille :
+    - boucle pour lignes :
+        - affichage d'une ligne de -
+        - boucle pour colonnes :
+            - affichage du modèle | 0 |
+
+-----------------
+| 0 | 0 | 0 | 0 |
+-----------------
+| 0 | 0 | 0 | 0 |
+-----------------
+| 0 | 0 | 0 | 0 |
+-----------------
+| 0 | 0 | 0 | 0 |
+-----------------
+
+classe jeu
+
+fonction déplacement :
+    - si pas d'obstacle (limite grille ou autre cellule) dans la direction voulue, déplacement d'une case dans cette direction
+
+fonction fusion :
+    - vérifie que la cellule suivante dans la direction du déplacement est de la même valeur
+    - si oui, cellule suivante doublée, mise de l'actuelle à 0
+    - si non, on continue le code
+
+condition victoire : regarder si une valeur du tableau est à 2048 -> si oui, victoire
+condition défaite : regarder si un mouvement est encore possible (déplacement ou fusion)
+    - regarder si une cellule est à 0
+    - si non :
+        - faire une copie du tableau en cours
+        - tester une par une les directions
+        - comparer le nouveau tableau avec la sauvegarde
+        - si différente, tester direction suivante
+    - si toutes les directions ne marchent pas, afficher la défaite
+
+Structure du code :
+    - création de la grille (tableau 4x4 initialisé avec des 0)
+    - génération de deux tuiles à des positions aléatoires
+    - boucle tant que pas victoire ou pas défaite :
+        - affichage de la grille et options de déplacement
+        - demande un déplacement
+        - déplacement
+        - vérification de fin de jeu (victoire/défaite)
+    - message de fin
